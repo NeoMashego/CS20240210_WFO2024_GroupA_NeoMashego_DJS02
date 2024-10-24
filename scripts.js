@@ -9,5 +9,10 @@ form.addEventListener("submit", (event) => {
   if (entries === "") {
     result.innerText = "Division not performed. Both values are required in inputs. Try again";
     return false;   //not supposed to perform calculation
-  }
+  };
+  if (divider === 0){
+    result.innerText = "Division not performed. Invalid number provided. Try again";
+    console.error(entries);   //should call back error
+    return false;
+  };
 });
