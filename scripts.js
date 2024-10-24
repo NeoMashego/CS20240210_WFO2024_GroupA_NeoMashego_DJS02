@@ -15,4 +15,10 @@ form.addEventListener("submit", (event) => {
     console.error(entries);   //should call back error
     return false;
   };
+  const letter = /[a-zA-Z]/;
+  const specialC = /'.!@\$%\^()_+]/;
+  if (dividend === letter || divider === specialC){
+    body.innerText = "Something critical went wrong. Please reload the page";
+    console.error(entries);
+  };
 });
